@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khalid Elbouari CV</title>
+  <link rel="stylesheet" href="css/style3.css">
+  <style>
+.app {
+  display: flex;
+  flex-wrap: wrap;          /* permet d'aller à la ligne suivante */
+  gap: 20px;                /* espace entre les cartes */
+  padding: 20px;
+  justify-content: center;  /* centre les cartes horizontalement */
+}
+
+/* Chaque carte prend 48% de la largeur du conteneur (deux cartes par ligne) */
+.cv-wrapper {
+  flex: 0 1 48%;            /* base: 48%, flex-grow: 0, flex-shrink: 1 */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+  min-width: 280px;         /* éviter trop rétrécir */
+}
+
+.cv-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+  </style>
+</head>
+<body>
+     <div id="cv-container" class="app"></div>
+    <script type="module" src="/js/index.js"></script>
+</body>
+</html>

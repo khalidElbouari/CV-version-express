@@ -1,0 +1,259 @@
+body{
+    padding:0;
+    margin: 0;
+    justify-items: center;
+    font-family: sans-serif;
+}
+.container{
+    max-width: 900px;
+    width: 100%;              
+    margin: 40px 20px;      
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+
+}
+/* style pour le header */
+/* Style pour le header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.profile-picture {
+  max-width: 160px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.name-status {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.name-status .status {
+  font-size: 0.9em;
+  font-weight: normal;
+  color: #666;
+  margin-left: 30px;
+}
+
+.contact-info {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+  align-items: start;
+}
+
+.contact-info .line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.label {
+  font-weight: 750;
+  color: #444;
+}
+
+.value {
+  color: #222;
+}
+
+/* Fin : style pour le header */
+/* separateur */
+.separateur {
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+    margin: 15px auto;
+    width: 90%;
+}
+
+/* Debut: education section */
+.mysection {
+    display: flex;
+    align-items: center;
+  }
+.mysection h2{
+    width: 170px;       
+    margin: 0;
+    text-align: left;
+}
+.education{
+    flex: 1;  
+}
+
+.education-item {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-left: 4px solid #010b16;
+}
+
+.school {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.degree {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.grade {
+    color: #444;
+}
+  
+/*  Fin: formation section */
+
+/*  Debut: experience section */
+.experience{
+    flex: 1;  
+}
+.experience-item{
+    padding: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #010b16;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.title {
+    font-weight: bold;
+    margin-bottom: 10px; 
+}
+
+.date {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.duration {
+    font-size: 14px;
+    font-style: italic;
+    color: #777;
+    margin-left: 10px; 
+    margin-bottom: 10px;  
+}
+
+.technologies {
+    font-size: 0.9em;
+    color: #444;
+    margin-bottom: 10px;  
+}
+
+.description {
+    margin: 10px 0;  
+    font-size: 0.95em;
+    color: #333;
+}
+/*  Fin: experience section */
+
+/* Debut : Projets Académiques  */
+.projects{
+    flex:1;
+}
+.project-item {
+    border-left: 4px solid #010b16;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Fin : Projets Académiques  */
+
+/* Debut : competence  */
+.competence {
+  display: flex;
+  flex-direction: column;
+  border-left: 4px solid #010b16;
+  border-radius: 6px;
+  padding-left: 15px;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.skill-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-title {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 3px;
+}
+
+.skill-details {
+  color: #444;
+  font-size: 0.95em;
+}
+/* Fin : competence  */
+
+.info-section {
+  display: flex;
+  padding: 15px 0;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 10px;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  
+  width: 100%;
+}
+
+.item {
+margin-left: 20px;
+  font-size: 0.95em;
+  margin-bottom: 4px;
+}
+
+.vertical-line {
+  width: 1px;
+  background-color: #ddd;
+  margin: 0 10px;
+}
+
+
+/* ******** */
+/* Debut :  certifications */
+/* .certifications {
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    
+}
+.certification-item {
+    padding-left:10px ;
+} */

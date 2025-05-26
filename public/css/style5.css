@@ -1,0 +1,263 @@
+:root {
+  --primary-color: #2d7ae5;
+  --secondary-color: #f5f9ff;
+  --text-dark: #2c3e50;
+  --text-medium: #5d6d7e;
+  --text-light: #7f8c8d;
+  --spacing-unit: 12px;
+  --border-radius: 6px;
+}
+
+body {
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--text-dark);
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 30px auto;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+/* Header avec accent de couleur */
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  background-color: var(--primary-color);
+  color: white;
+  position: relative;
+}
+
+.profile-picture {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-right: 30px;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.name-status {
+  margin-bottom: 15px;
+}
+
+.name-status .name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 5px 5px;
+  letter-spacing: -0.5px;
+}
+
+.name-status .status {
+  font-size: 1.1rem;
+  font-weight: 400;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 15px;
+}
+
+.contact-info .line {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.label {
+  display: none;
+}
+
+.value {
+  color: white;
+  opacity: 0.9;
+  margin-left: 15px;
+}
+
+/* Content Sections */
+.content {
+  padding: 30px;
+}
+
+/* Section Headers */
+.mysection {
+  margin-bottom: 25px;
+}
+
+.mysection h2 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align:center ;
+}
+
+/* Education */
+.education {
+  display: grid;
+  gap: 20px;
+}
+
+.education-item {
+  padding: 0 0 0 15px;
+  border-left: 2px solid var(--primary-color);
+}
+
+.school {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.degree {
+  font-size: 0.95rem;
+  color: var(--text-medium);
+  margin-bottom: 5px;
+}
+
+.grade {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* Experience */
+.experience-item {
+  position: relative;
+  padding: 0 0 15px 15px;
+  margin-bottom: 20px;
+  border-left: 2px solid var(--primary-color);
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.date {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.duration {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-left: 8px;
+}
+
+.technologies {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--text-medium);
+}
+
+.description {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+/* Projects */
+.project-item {
+  padding: 0 0 15px 15px;
+  margin-bottom: 20px;
+  border-left: 2px solid var(--primary-color);
+}
+
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.competence {
+  flex: 1;
+  min-width: 250px;
+  padding: 0 0 0 15px;
+  border-left: 2px solid var(--primary-color);
+}
+
+.skill-group {
+  margin-bottom: 12px;
+}
+
+.skill-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.skill-details {
+  font-size: 0.95rem;
+  color: var(--text-medium);
+}
+
+/* Info Section - Soft Skills, Languages, Hobbies in line */
+.info-section {
+  display: flex;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.info-block {
+  flex: 1;
+  padding: 0 0 0 15px;
+  border-left: 2px solid var(--primary-color);
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.item {
+  position: relative;
+  padding-left: 12px;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: var(--text-medium);
+}
+
+.item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+/* Separator */
+.separateur {
+  height: 1px;
+  background-color: var(--secondary-color);
+  border: none;
+  margin: 25px auto;
+  width: 100%;
+}
