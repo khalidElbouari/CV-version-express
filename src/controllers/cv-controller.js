@@ -47,7 +47,6 @@ export function deleteCVHandler(req, res) {
   }
 }
 
-// **Nouveau handler pour la recherche**
 export function searchCVsHandler(req, res) {
   const { name, technology } = req.query;
 

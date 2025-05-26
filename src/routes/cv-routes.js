@@ -4,10 +4,10 @@ import {getAllCVsHandler, getCVByIdHandler, addCVHandler, updateCVHandler, delet
 const router = express.Router();
 
 router.get('/cvs', getAllCVsHandler);
-router.get('/cvs/:id', getCVByIdHandler);
+router.get('/cvs/search', searchCVsHandler); // !!! doit venir AVANT
+router.get('/cvs/:id', getCVByIdHandler);    // !!! sinon il capture "search"
 router.post('/cvs', addCVHandler);
 router.put('/cvs/:id', updateCVHandler);
 router.delete('/cvs/:id', deleteCVHandler);
-router.get('/cvs/search', searchCVsHandler); 
 
 export default router;
