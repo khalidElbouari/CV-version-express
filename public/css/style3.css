@@ -1,162 +1,187 @@
- /* Header du profil - Style centré */
-        .profile-header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-bottom: 40px;
-        }
+/* Header du profil - Style centré */
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-        .profile-picture {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
 
-        .name-status .name {
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            color: #000;
-            margin-bottom: 8px;
-        }
+.name-status .name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #000;
+    margin-bottom: 8px;
+}
 
-        .status {
-            font-size: 1.1rem;
-            font-weight: 400;
-            color: #555;
-            margin-bottom: 20px;
-        }
+.status {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 20px;
+}
 
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            font-size: 0.9rem;
-        }
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    font-size: 0.9rem;
+}
 
-        .contact-info .line {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+.contact-info .line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
-        .contact-info .label {
-            display: none; /* Style épuré sans labels */
-        }
+.contact-info .label {
+    display: none; /* Style épuré sans labels */
+}
 
-        .contact-info .value {
-            color: #555;
-        }
+.contact-info .value {
+    color: #555;
+}
 
-        /* Sections du CV */
-        .mysection {
-            margin-bottom: 30px;
-        }
+/* Sections du CV */
+.mysection {
+    margin-bottom: 30px;
+}
 
-        .mysection h2 {
-            position: relative;
-            font-size: 1.2rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: #000;
-            margin: 40px 0 20px;
-            padding-bottom: 8px;
-        }
+.mysection h2 {
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000;
+    margin: 40px 0 20px;
+    padding-bottom: 8px;
+}
 
-        .mysection h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background-color: #000;
-        }
+.mysection h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #000;
+}
 
-        .education-item, .experience-item {
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
-        }
+.education-item, .experience-item {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
 
-        .education-item:last-child, .experience-item:last-child {
-            border-bottom: none;
-        }
+.education-item:last-child, .experience-item:last-child {
+    border-bottom: none;
+}
 
-        .school, .title {
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: #000;
-            margin-bottom: 5px;
-        }
+.school, .title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #000;
+    margin-bottom: 5px;
+}
 
-        .degree, .company {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 5px;
-        }
+.degree, .company {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
 
-        .date, .duration {
-            font-size: 0.85rem;
-            color: #777;
-            margin-bottom: 10px;
-            font-style: italic;
-        }
+.date, .duration {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 10px;
+    font-style: italic;
+}
 
-        .description {
-            font-size: 0.95rem;
-            color: #444;
-            margin-top: 10px;
-        }
+.description {
+    font-size: 0.95rem;
+    color: #444;
+    margin-top: 10px;
+}
 
-        .technologies {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: #555;
-        }
+.technologies {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
 
-        /* Section info - Style moderne */
-        .info-section {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            gap: 20px;
-            margin-top: 30px;
-        }
+/* competence */
+.competence {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
 
-        .info-block {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            min-width: 0;
-        }
+.skill-group {
+  padding: 4px 0;
+}
 
-        .info-block .section-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: #000;
-            margin: 0 0 15px;
-        }
+.skill-title {
+  font-weight: 600;
+  color: #000;
+  font-size: 0.95rem;
+}
 
-        .item {
-            font-size: 0.95rem;
-            color: #444;
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 15px;
-        }
+.skill-details {
+  font-size: 0.85rem;
+  color: #444;
+  margin-top: 2px;
+}
 
-        .item::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: #000;
-        }
+/* End competence */
+/* Section info - Style moderne */
+.info-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.info-block .section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000;
+    margin: 0 0 15px;
+}
+
+.item {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.item::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #000;
+}

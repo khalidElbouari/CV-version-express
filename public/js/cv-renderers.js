@@ -62,7 +62,6 @@ export function renderExperiencesSectionTemplate(experiences) {
                 <div class="date">📅<span class="duration">Durée : ${exp.duration}</span></div>
               </div>
               <div class="description">${exp.title}</div>
-              <div class="description">${exp.description}</div>
               <div class="technologies"><strong>Technologies :</strong> ${exp.technologies.join(", ")}</div>
             </div>
           `).join('')}
@@ -72,6 +71,25 @@ export function renderExperiencesSectionTemplate(experiences) {
     </div>
   `;
 }
+export function renderTechnologySkillsSection(technologySkills) {
+  return `
+    <div>
+      <section class="mysection">
+        <h2>Technologies</h2>
+        <div class="competence">
+          ${technologySkills.map(skill => `
+            <div class="skill-group">
+              <span class="skill-title">${skill.skill} :</span>
+              <span class="skill-details">${skill.details.join(", ")}</span>
+            </div>
+          `).join('')}
+        </div>
+      </section>
+      <div class="separateur"></div>
+    </div>
+  `;
+}
+
 export function renderInfoSectionTemplate(softSkills, languages, interests) {
   return `
     <section class="info-section">

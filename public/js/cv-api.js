@@ -2,7 +2,8 @@ import {
   renderProfileTemplate, 
   renderEducationSectionTemplate, 
   renderExperiencesSectionTemplate, 
-  renderInfoSectionTemplate 
+  renderInfoSectionTemplate,
+  renderTechnologySkillsSection
 } 
 from './cv-renderers.js';
 
@@ -38,11 +39,14 @@ export function renderCVs(data) {
       allHTML += renderProfileTemplate(cv.profile);
       allHTML += renderEducationSectionTemplate(cv.education);
       allHTML += renderExperiencesSectionTemplate(cv.experiences);
+      allHTML += renderTechnologySkillsSection(cv.technologySkills);
       allHTML += renderInfoSectionTemplate(cv.softSkills, cv.languages, cv.interests);
+      // Nouveau bouton Télécharger PDF
+      allHTML += `<button class="download-pdf-btn" data-cvid="${cvKey}">Télécharger en PDF</button>`;
+
       allHTML += `</div>`;
     }
   }
-
   container.innerHTML = allHTML;
 }
 

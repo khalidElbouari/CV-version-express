@@ -46,3 +46,50 @@ function updateResultsInfo(count) {
     resultsInfo.textContent = `${count} CV${count > 1 ? 's' : ''} trouvé${count > 1 ? 's' : ''}`;
   }
 }
+
+
+document.addEventListener('click', async (event) => {
+  if (event.target.classList.contains('download-pdf-btn')) {
+    const cvId = event.target.getAttribute('data-cvid');
+    const cvElement = document.getElementById(cvId);
+    if (!cvElement) {
+      alert('CV non trouvé');
+      return;
+    }
+
+    const { jsPDF } = window.jspdf;
+
+    // On capture tout le contenu en canvas, à haute résolution
+    const canvas = await html2canvas(cvElement, { scale: 2 });
+    const imgData = canvas.toDataURL('image/png');
+
+    const pdf = new jsPDF('p', 'pt', 'a4');
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = pdf.internal.pageSize.getHeight();
+
+    // Dimensions du canvas/image
+    const imgWidth = canvas.width;
+    const imgHeight = canvas.height;
+
+    // Ratio pour redimensionner l'image à la largeur PDF (points)
+    const ratio = pdfWidth / imgWidth;
+    const imgHeightInPdf = imgHeight * ratio;
+
+    let heightLeft = imgHeightInPdf;
+    let position = 0;
+
+    // On dessine l'image sur la première page
+    pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, imgHeightInPdf);
+    heightLeft -= pdfHeight;
+
+    // Ajouter autant de pages que nécessaire
+    while (heightLeft > 0) {
+      position = heightLeft - imgHeightInPdf;
+      pdf.addPage();
+      pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, imgHeightInPdf);
+      heightLeft -= pdfHeight;
+    }
+
+    pdf.save(`CV_${cvId}.pdf`);
+  }
+});
