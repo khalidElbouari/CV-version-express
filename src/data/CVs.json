@@ -136,7 +136,191 @@
       ],
       "interests": ["Natation", "Football", "Design"]
     },
+   
     "cv2": {
+      "profile": {
+        "photo": "images/chaymae.jpg",
+        "firstName": "Chaymae",
+        "lastName": "EL BOUSSADANY",
+        "birthday": {
+          "day": 2,
+          "month": 4,
+          "year": 2003
+        },
+        "phone": "0679383336",
+        "email": "elboussadanychaymae@gmail.com",
+        "address": "Al Andalous N°317, Ain Chkef Fèz ",
+        "professionalSummary": "Étudiante en  1ère année Master  Qualité de Logiciel avec des compétences en génie logiciel, méthodes agiles et traitement de données.",
+        "links": [
+          "https://www.linkedin.com/in/chaymae-el-boussadany-3223ba269",
+          "https://github.com/ShyM4e",
+          ""
+        ]
+      },
+      "education": [
+        {
+          "diploma": "Master Big Data Analytics And Smart Systems(non poursuivi)",
+          "organisation": "FSDM - Université Sidi Mohammed ben Abdellah - Fès",
+          "year": 2024
+        },
+        {
+          "diploma": "Licence Fondamentale : Science Mathématiques et Informatique",
+          "organisation": "FSDM - Université Sidi Mohammed ben Abdellah - Fès",
+          "year": 2023
+        },
+        {
+          "diploma": "Baccalauréat Sciences Mathématiques B, option Français",
+          "organisation": "Lycée Technique de Fes",
+          "year": 2020
+        }
+      ],
+      "technologySkills": [
+        {
+          "skill": "Jakarta Entreprise Edition (JEE)",
+          "details": [
+            "Architecture 3 tiers",
+            "Modèle MVC2",
+            "Servlets et JSP",
+            "modèle DAO",
+            "Administration Tomcat"
+          ]
+        },
+        {
+          "skill": "Ingénierie du Web",
+          "details": ["HTML", "CSS", "JavaScript", "Node.js"]
+        },
+        {
+          "skill": "Ingénierie DevOps",
+          "details": [
+            "Maven",
+            "Git",
+            "GitHub",
+            "GitLab",
+            "Jira",
+            "JUnit",
+            "Selenuim",
+            "Docker",
+            "Kubernetes"
+          ]
+        },
+        {
+          "skill": "Technologie XML",
+          "details": [
+            "Standard XML",
+            "Bases de données XML",
+            "Parseurs XML (DOM, SAX)",
+            "DTD",
+            "XSD (XML Schema)",
+            "XSLT",
+            "XPath",
+            "XQuery"
+          ]
+        },
+        {
+          "skill": "Developpement Mobile",
+          "details": ["Flutter"]
+        },
+        {
+          "skill": "Gestion Base de Données",
+          "details": ["MySQL", "MongoDB", "Neo4j", "Firebase"]
+        },
+        {
+          "skill": "Intelligence Artificielle & Traitement des Données",
+          "details": [
+            "Python",
+            "Pandas, NumPy",
+            "Nettoyage et préparation des données",
+            "Matplotlib, Seaborn",
+            "Scikit-Learn",
+            "TensorFlow/Keras"
+          ]
+        },
+        {
+          "skill": "Méthodes Agiles",
+          "details": ["Scrum"]
+        }
+      ],
+      "experiences": [
+        {
+          "type": "Projet",
+          "organisation": "FSDM",
+          "title": "Réalisation d'une application de Gestion de CVs",
+          "technologies": ["HTML", "CSS", "JavaScript"],
+          "year": 2025,
+          "duration": "1 mois"
+        },
+        {
+          "type": "Projet",
+          "organisation": "FSDM",
+          "title": "Générateur de diagrammes de classe",
+          "technologies": ["Java"],
+          "year": 2025,
+          "duration": "1 mois"
+        },
+        {
+          "type": "Projet",
+          "organisation": "FSDM",
+          "title": "Analyse sentimentale des tweets",
+          "technologies": ["Python", "Selenium", "MongoDB", "Power BI"],
+          "year": 2024,
+          "duration": "1 mois"
+        },
+        {
+          "type": "Projet",
+          "organisation": "FSDM",
+          "title": "Cloud Migration Project – Solution Cloud pour e-commerce",
+          "technologies": ["Hyper-V", "NextCloud", "Postfix"],
+          "year": 2024,
+          "duration": "1 mois"
+        },
+        {
+          "type": "Projet",
+          "organisation": "FSDM",
+          "title": "Application Mobile \"In Morocco\"",
+          "technologies": ["Flutter", "SQFLite", "Firebase"],
+          "year": 2023,
+          "duration": "3 mois"
+        }
+      ],
+      "softSkills": [
+        "Communication",
+        "Esprit d'équipe",
+        "Intelligence Emotionnelle",
+        "Ecoute Active",
+        "Créativité",
+        "Capacité de Résolution de problèmes",
+        "Flexibilité et Dynamisme",
+        "Présence"
+      ],
+      "languages": [
+        {
+          "language": "Français",
+          "level": "B2",
+          "certification": "",
+          "experience": ""
+        },
+        {
+          "language": "Anglais",
+          "level": "C1",
+          "certification": "",
+          "experience": ""
+        },
+        {
+          "language": "Allemand",
+          "level": "A1",
+          "certification": "",
+          "experience": ""
+        },
+        {
+          "language": "Espagnol",
+          "level": "A1",
+          "certification": "",
+          "experience": ""
+        }
+      ],
+      "interests": ["Cinéma", "Design graphique", "Musique et Chant", "Lecture"]
+    },
+    "cv3": {
       "profile": {
         "photo": "images/samira-pic.jpeg",
         "firstName": "Samira",
@@ -247,371 +431,5 @@
         }
       ],
       "interests": ["Lecture", "Voyages", "Développement durable"]
-    },
-    "cv3": {
-      "profile": {
-        "photo": "resources/chaymae.jpg",
-        "firstName": "Chaymae",
-        "lastName": "EL BOUSSADANY",
-        "birthday": {
-          "day": 2,
-          "month": 4,
-          "year": 2003
-        },
-        "phone": "0679383336",
-        "email": "elboussadanychaymae@gmail.com",
-        "address": "Al Andalous N°317, Ain Chkef Fèz ",
-        "professionalSummary": "Étudiante en  1ère année Master  Qualité de Logiciel avec des compétences en génie logiciel, méthodes agiles et traitement de données.",
-        "links": [
-          "https://www.linkedin.com/in/chaymae-el-boussadany-3223ba269",
-          "https://github.com/ShyM4e",
-          ""
-        ]
-      },
-      "education": [
-        {
-          "diploma": "Master Big Data Analytics And Smart Systems(non poursuivi)",
-          "organisation": "FSDM - Université Sidi Mohammed ben Abdellah - Fès",
-          "year": 2024
-        },
-        {
-          "diploma": "Licence Fondamentale : Science Mathématiques et Informatique",
-          "organisation": "FSDM - Université Sidi Mohammed ben Abdellah - Fès",
-          "year": 2023
-        },
-        {
-          "diploma": "Baccalauréat Sciences Mathématiques B, option Français",
-          "organisation": "Lycée Technique de Fes",
-          "year": 2020
-        }
-      ],
-      "technologySkills": [
-        {
-          "skill": "Jakarta Entreprise Edition (JEE)",
-          "details": [
-            "Architecture 3 tiers",
-            "Modèle MVC2",
-            "Servlets et JSP",
-            "modèle DAO",
-            "Administration Tomcat"
-          ]
-        },
-        {
-          "skill": "Ingénierie du Web",
-          "details": ["HTML", "CSS", "JavaScript", "Node.js"]
-        },
-        {
-          "skill": "Ingénierie DevOps",
-          "details": [
-            "Maven",
-            "Git",
-            "GitHub",
-            "GitLab",
-            "Jira",
-            "JUnit",
-            "Selenuim",
-            "Docker",
-            "Kubernetes"
-          ]
-        },
-        {
-          "skill": "Technologie XML",
-          "details": [
-            "Standard XML",
-            "Bases de données XML",
-            "Parseurs XML (DOM, SAX)",
-            "DTD",
-            "XSD (XML Schema)",
-            "XSLT",
-            "XPath",
-            "XQuery"
-          ]
-        },
-        {
-          "skill": "Developpement Mobile",
-          "details": ["Flutter"]
-        },
-        {
-          "skill": "Gestion Base de Données",
-          "details": ["MySQL", "MongoDB", "Neo4j", "Firebase"]
-        },
-        {
-          "skill": "Intelligence Artificielle & Traitement des Données",
-          "details": [
-            "Python",
-            "Pandas, NumPy",
-            "Nettoyage et préparation des données",
-            "Matplotlib, Seaborn",
-            "Scikit-Learn",
-            "TensorFlow/Keras"
-          ]
-        },
-        {
-          "skill": "Méthodes Agiles",
-          "details": ["Scrum"]
-        }
-      ],
-      "experiences": [
-        {
-          "type": "Projet",
-          "organisation": "FSDM",
-          "title": "Réalisation d'une application de Gestion de CVs",
-          "technologies": ["HTML", "CSS", "JavaScript"],
-          "year": 2025,
-          "duration": "1 mois"
-        },
-        {
-          "type": "Projet",
-          "organisation": "FSDM",
-          "title": "Générateur de diagrammes de classe",
-          "technologies": ["Java"],
-          "year": 2025,
-          "duration": "1 mois"
-        },
-        {
-          "type": "Projet",
-          "organisation": "FSDM",
-          "title": "Analyse sentimentale des tweets",
-          "technologies": ["Python", "Selenium", "MongoDB", "Power BI"],
-          "year": 2024,
-          "duration": "1 mois"
-        },
-        {
-          "type": "Projet",
-          "organisation": "FSDM",
-          "title": "Cloud Migration Project – Solution Cloud pour e-commerce",
-          "technologies": ["Hyper-V", "NextCloud", "Postfix"],
-          "year": 2024,
-          "duration": "1 mois"
-        },
-        {
-          "type": "Projet",
-          "organisation": "FSDM",
-          "title": "Application Mobile \"In Morocco\"",
-          "technologies": ["Flutter", "SQFLite", "Firebase"],
-          "year": 2023,
-          "duration": "3 mois"
-        }
-      ],
-      "softSkills": [
-        "Communication",
-        "Esprit d'équipe",
-        "Intelligence Emotionnelle",
-        "Ecoute Active",
-        "Créativité",
-        "Capacité de Résolution de problèmes",
-        "Flexibilité et Dynamisme",
-        "Présence"
-      ],
-      "languages": [
-        {
-          "language": "Français",
-          "level": "B2",
-          "certification": "",
-          "experience": ""
-        },
-        {
-          "language": "Anglais",
-          "level": "C1",
-          "certification": "",
-          "experience": ""
-        },
-        {
-          "language": "Allemand",
-          "level": "A1",
-          "certification": "",
-          "experience": ""
-        },
-        {
-          "language": "Espagnol",
-          "level": "A1",
-          "certification": "",
-          "experience": ""
-        }
-      ],
-      "interests": ["Cinéma", "Design graphique", "Musique et Chant", "Lecture"]
-    },
-    "cv4": {
-      "profile": {
-        "photo": "resources/chaymae.jpg",
-        "firstName": "Chaymae",
-        "lastName": "EL BOUSSADANY",
-        "birthday": {
-          "day": 2,
-          "month": 4,
-          "year": 2003
-        },
-        "phone": "0679383336",
-        "email": "elboussadanychaymae@gmail.com",
-        "address": "Al Andalous N°317, Ain Chkef Fèz ",
-        "professionalSummary": "Étudiante en  1ère année Master  Qualité de Logiciel avec des compétences en génie logiciel, méthodes agiles et traitement de données.",
-        "links": [
-          "https://www.linkedin.com/in/chaymae-el-boussadany-3223ba269",
-          "https://github.com/ShyM4e",
-          ""
-        ]
-      },
-      "education": [
-        {
-          "diploma": "Master Big Data Analytics And Smart Systems(non poursuivi)",
-          "organisation": "FSDM - Université Sidi Mohammed ben Abdellah - Fès",
-          "year": 2024
-        },
-        {
-          "diploma": "Licence Fondamentale : Science Mathématiques et Informatique",
-          "organisation": "FSDM - Université Sidi Mohammed ben Abdellah - Fès",
-          "year": 2023
-        },
-        {
-          "diploma": "Baccalauréat Sciences Mathématiques B, option Français",
-          "organisation": "Lycée Technique de Fes",
-          "year": 2020
-        }
-      ],
-      "technologySkills": [
-        {
-          "skill": "Jakarta Entreprise Edition (JEE)",
-          "details": [
-            "Architecture 3 tiers",
-            "Modèle MVC2",
-            "Servlets et JSP",
-            "modèle DAO",
-            "Administration Tomcat"
-          ]
-        },
-        {
-          "skill": "Ingénierie du Web",
-          "details": ["HTML", "CSS", "JavaScript", "Node.js"]
-        },
-        {
-          "skill": "Ingénierie DevOps",
-          "details": [
-            "Maven",
-            "Git",
-            "GitHub",
-            "GitLab",
-            "Jira",
-            "JUnit",
-            "Selenuim",
-            "Docker",
-            "Kubernetes"
-          ]
-        },
-        {
-          "skill": "Technologie XML",
-          "details": [
-            "Standard XML",
-            "Bases de données XML",
-            "Parseurs XML (DOM, SAX)",
-            "DTD",
-            "XSD (XML Schema)",
-            "XSLT",
-            "XPath",
-            "XQuery"
-          ]
-        },
-        {
-          "skill": "Developpement Mobile",
-          "details": ["Flutter"]
-        },
-        {
-          "skill": "Gestion Base de Données",
-          "details": ["MySQL", "MongoDB", "Neo4j", "Firebase"]
-        },
-        {
-          "skill": "Intelligence Artificielle & Traitement des Données",
-          "details": [
-            "Python",
-            "Pandas, NumPy",
-            "Nettoyage et préparation des données",
-            "Matplotlib, Seaborn",
-            "Scikit-Learn",
-            "TensorFlow/Keras"
-          ]
-        },
-        {
-          "skill": "Méthodes Agiles",
-          "details": ["Scrum"]
-        }
-      ],
-      "experiences": [
-        {
-          "type": "Projet",
-          "organisation": "FSDM",
-          "title": "Réalisation d'une application de Gestion de CVs",
-          "technologies": ["HTML", "CSS", "JavaScript"],
-          "year": 2025,
-          "duration": "1 mois"
-        },
-        {
-          "type": "Projet",
-          "organisation": "FSDM",
-          "title": "Générateur de diagrammes de classe",
-          "technologies": ["Java"],
-          "year": 2025,
-          "duration": "1 mois"
-        },
-        {
-          "type": "Projet",
-          "organisation": "FSDM",
-          "title": "Analyse sentimentale des tweets",
-          "technologies": ["Python", "Selenium", "MongoDB", "Power BI"],
-          "year": 2024,
-          "duration": "1 mois"
-        },
-        {
-          "type": "Projet",
-          "organisation": "FSDM",
-          "title": "Cloud Migration Project – Solution Cloud pour e-commerce",
-          "technologies": ["Hyper-V", "NextCloud", "Postfix"],
-          "year": 2024,
-          "duration": "1 mois"
-        },
-        {
-          "type": "Projet",
-          "organisation": "FSDM",
-          "title": "Application Mobile \"In Morocco\"",
-          "technologies": ["Flutter", "SQFLite", "Firebase"],
-          "year": 2023,
-          "duration": "3 mois"
-        }
-      ],
-      "softSkills": [
-        "Communication",
-        "Esprit d'équipe",
-        "Intelligence Emotionnelle",
-        "Ecoute Active",
-        "Créativité",
-        "Capacité de Résolution de problèmes",
-        "Flexibilité et Dynamisme",
-        "Présence"
-      ],
-      "languages": [
-        {
-          "language": "Français",
-          "level": "B2",
-          "certification": "",
-          "experience": ""
-        },
-        {
-          "language": "Anglais",
-          "level": "C1",
-          "certification": "",
-          "experience": ""
-        },
-        {
-          "language": "Allemand",
-          "level": "A1",
-          "certification": "",
-          "experience": ""
-        },
-        {
-          "language": "Espagnol",
-          "level": "A1",
-          "certification": "",
-          "experience": ""
-        }
-      ],
-      "interests": ["Cinéma", "Design graphique", "Musique et Chant", "Lecture"]
-    }
+    } 
 }

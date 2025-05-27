@@ -1,4 +1,4 @@
-import { getAllCVs, getCVById, addCV, updateCV, deleteCV, searchCVsByName, searchCVsByTechnology } from '../services/cv-service.js';
+import { getAllCVs, getCVById, addCV, updateCV, deleteCV,searchCVs } from '../services/cv-service.js';
 
 // GET /cvs
 export function getAllCVsHandler(req, res) {
@@ -48,19 +48,9 @@ export function deleteCVHandler(req, res) {
 }
 
 export function searchCVsHandler(req, res) {
-  const { name, technology } = req.query;
+  const { name, technology, title } = req.query;
 
-  if (name) {
-    const results = searchCVsByName(name);
-    return res.json(results);
-  }
+  const results = searchCVs({ name, technology, title });
 
-  if (technology) {
-    const results = searchCVsByTechnology(technology);
-    return res.json(results);
-  }
-
-  // Si aucun filtre, retourne tout
-  const allCVs = getAllCVs();
-  res.json(allCVs);
+  res.json(results);
 }

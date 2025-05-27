@@ -4,39 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khalid Elbouari CV</title>
-  <link rel="stylesheet" href="css/style4.css">
-  <style>
-.app {
-  display: flex;
-  flex-wrap: wrap;          /* permet d'aller à la ligne suivante */
-  gap: 20px;                /* espace entre les cartes */
-  padding: 20px;
-  justify-content: center;  /* centre les cartes horizontalement */
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style3.css">
+    <style>
+
+
+/* Container principal */
+.main-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 30px; 
 }
 
-/* Chaque carte prend 48% de la largeur du conteneur (deux cartes par ligne) */
+/* Grille avec 3 colonnes sur grands écrans */
+#cv-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, 1fr)); 
+    gap: 30px; /* plus d'espace entre les CV */
+    padding: 20px 0;
+}
+
+/* Carte CV individuelle */
 .cv-wrapper {
-  flex: 0 1 48%;            /* base: 48%, flex-grow: 0, flex-shrink: 1 */
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 15px;
-  box-sizing: border-box;
-  transition: transform 0.2s ease;
-  min-width: 280px;         /* éviter trop rétrécir */
+    background-color: #fff;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .cv-wrapper:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.18);
 }
 
+/* Suppression des hr inutiles */
+hr {
+    display: none;
+}
 
-  </style>
+/* cv-count */
+#cv-count {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #333;
+    background-color: #f0f4f8;
+    padding: 10px 20px;
+    border-radius: 25px;
+    width: fit-content;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+</style>
 </head>
 <body>
-     <div id="cv-container" class="app"></div>
+    <div class="filter-header">
+        <div class="filter-container">
+            <div class="logo">📋CVs</div>
+            
+            <div class="filter-controls">
+                <input type="text" id="name-filter" class="filter-input" placeholder="Nom...">
+                <input type="text" id="tech-filter" class="filter-input" placeholder="Technologies...">
+                <input type="text" id="title-filter" class="filter-input" placeholder="Titre...">
+                <button class="clear-btn" onclick="clearAllFilters()">Effacer</button>
+            </div>
+            <div class="results-info" id="results-info"></div>
+        </div>
+    </div>
+    <div id="cv-count"></div>
+    <!-- Container principal avec grille -->
+        <div class="main-container">
+            <div id="cv-container"></div>
+        </div>
     <script type="module" src="/js/index.js"></script>
 </body>
 </html>

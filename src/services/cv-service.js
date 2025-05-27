@@ -20,24 +20,39 @@ export function deleteCV(id) {
   return cvRepository.deleteCV(id);
 }
 
-// **Nouvelle fonction de recherche par nom**
-export function searchCVsByName(name) {
-  const cvs = cvRepository.getAllCVs();
-  const lowerName = name.toLowerCase();
-  return Object.values(cvs).filter(cv => 
-    cv.profile.firstName.toLowerCase().includes(lowerName) ||
-    cv.profile.lastName.toLowerCase().includes(lowerName)
-  );
-}
 
-// **Nouvelle fonction de recherche par technologie**
-export function searchCVsByTechnology(technology) {
-  const cvs = cvRepository.getAllCVs();
-  const lowerTech = technology.toLowerCase();
-  return Object.values(cvs).filter(cv => 
-    cv.technologySkills.some(skill =>
-      skill.skill.toLowerCase().includes(lowerTech) ||
-      skill.details.some(detail => detail.toLowerCase().includes(lowerTech))
-   )
+export function searchCVs({ name, technology, title }) {
+  const allCVs = getAllCVs();
+
+  const includesIgnoreCase = (text = '', search = '') =>
+    text.toLowerCase().includes(search.toLowerCase());
+
+  const filteredCVs = Object.fromEntries(
+    Object.entries(allCVs).filter(([key, cv]) => {
+      const matchName =
+        !name ||
+        includesIgnoreCase(cv.profile.firstName, name) ||
+        includesIgnoreCase(cv.profile.lastName, name);
+
+      const techSkillsMatch = cv.technologySkills?.some(ts =>
+        includesIgnoreCase(ts.skill, technology) ||
+        ts.details?.some(detail => includesIgnoreCase(detail, technology))
+      );
+
+      const experiencesTechMatch = cv.experiences?.some(exp =>
+        exp.technologies?.some(tech => includesIgnoreCase(tech, technology))
+      );
+
+      const matchTechnology =
+        !technology || techSkillsMatch || experiencesTechMatch;
+
+    const matchTitle =
+        !title ||
+        includesIgnoreCase(cv.profile.professionalSummary, title);
+
+            return matchName && matchTechnology && matchTitle;
+          })
   );
+
+  return filteredCVs;
 }

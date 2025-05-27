@@ -47,12 +47,15 @@ export function renderEducationSectionTemplate(education) {
 }
 
 export function renderExperiencesSectionTemplate(experiences) {
+  // Ne prendre que les 2 premières expériences
+  const topTwoExperiences = experiences.slice(0, 2);
+
   return `
     <div>
       <section class="mysection">
         <h2>Expérience</h2>
         <div class="experience">
-          ${experiences.map(exp => `
+          ${topTwoExperiences.map(exp => `
             <div class="experience-item">
               <div class="title">${exp.organisation} | ${exp.type}</div>
               <div class="experience-meta">
@@ -69,23 +72,22 @@ export function renderExperiencesSectionTemplate(experiences) {
     </div>
   `;
 }
-
 export function renderInfoSectionTemplate(softSkills, languages, interests) {
   return `
     <section class="info-section">
       <div class="info-block">
         <div class="section-title">Soft Skills:</div>
-        ${softSkills.map(skill => `<div class="item">${skill}</div>`).join('')}
+        ${softSkills.slice(0, 3).map(skill => `<div class="item">${skill}</div>`).join('')}
       </div>
       <div class="vertical-line"></div>
       <div class="info-block">
         <div class="section-title">Langues:</div>
-        ${languages.map(lang => `<div class="item">${lang.language}</div>`).join('')}
+        ${languages.slice(0, 3).map(lang => `<div class="item">${lang.language}</div>`).join('')}
       </div>
       <div class="vertical-line"></div>
       <div class="info-block">
         <div class="section-title">Loisirs:</div>
-        ${interests.map(interest => `<div class="item">${interest}</div>`).join('')}
+        ${interests.slice(0, 3).map(interest => `<div class="item">${interest}</div>`).join('')}
       </div>
     </section>
   `;
