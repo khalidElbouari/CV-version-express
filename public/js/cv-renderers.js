@@ -80,7 +80,6 @@ export function renderTechnologySkillsSection(technologySkills) {
           ${technologySkills.map(skill => `
             <div class="skill-group">
               <span class="skill-title">${skill.skill} :</span>
-              <span class="skill-details">${skill.details.join(", ")}</span>
             </div>
           `).join('')}
         </div>

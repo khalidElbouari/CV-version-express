@@ -57,32 +57,35 @@ document.addEventListener('click', async (event) => {
       return;
     }
 
+    // Afficher temporairement tous les boutons de téléchargement (au cas où ils sont masqués)
+    const downloadButtons = cvElement.querySelectorAll('.download-pdf-btn');
+    downloadButtons.forEach(btn => btn.style.display = 'block');
+
     const { jsPDF } = window.jspdf;
 
-    // On capture tout le contenu en canvas, à haute résolution
+    // Capture du CV
     const canvas = await html2canvas(cvElement, { scale: 2 });
     const imgData = canvas.toDataURL('image/png');
 
+    // Re-masquer les boutons après la capture
+    downloadButtons.forEach(btn => btn.style.display = 'none');
+
+    // Génération du PDF
     const pdf = new jsPDF('p', 'pt', 'a4');
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = pdf.internal.pageSize.getHeight();
 
-    // Dimensions du canvas/image
     const imgWidth = canvas.width;
     const imgHeight = canvas.height;
-
-    // Ratio pour redimensionner l'image à la largeur PDF (points)
     const ratio = pdfWidth / imgWidth;
     const imgHeightInPdf = imgHeight * ratio;
 
     let heightLeft = imgHeightInPdf;
     let position = 0;
 
-    // On dessine l'image sur la première page
     pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, imgHeightInPdf);
     heightLeft -= pdfHeight;
 
-    // Ajouter autant de pages que nécessaire
     while (heightLeft > 0) {
       position = heightLeft - imgHeightInPdf;
       pdf.addPage();

@@ -9,20 +9,21 @@ export function getCVById(id) {
 }
 
 export function addCV(newCV) {
-  cvRepository.addCV(newCV);
+  return cvRepository.addCV(newCV); // ✅ rajouter return si besoin d’attendre
 }
 
 export function updateCV(id, updatedCV) {
   return cvRepository.updateCV(id, updatedCV);
 }
 
+
 export function deleteCV(id) {
   return cvRepository.deleteCV(id);
 }
 
 
-export function searchCVs({ name, technology, title }) {
-  const allCVs = getAllCVs();
+export async function searchCVs({ name, technology, title }) {
+  const allCVs = await getAllCVs(); // ✅ corrige le problème
 
   const includesIgnoreCase = (text = '', search = '') =>
     text.toLowerCase().includes(search.toLowerCase());
@@ -46,12 +47,12 @@ export function searchCVs({ name, technology, title }) {
       const matchTechnology =
         !technology || techSkillsMatch || experiencesTechMatch;
 
-    const matchTitle =
+      const matchTitle =
         !title ||
         includesIgnoreCase(cv.profile.professionalSummary, title);
 
-            return matchName && matchTechnology && matchTitle;
-          })
+      return matchName && matchTechnology && matchTitle;
+    })
   );
 
   return filteredCVs;

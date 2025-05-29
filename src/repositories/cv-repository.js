@@ -1,4 +1,4 @@
-import fs from "fs";
+import { readFile, writeFile } from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -6,45 +6,47 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const filePath = path.join(__dirname, "../data/CVs.json");
 
-function readData() {
-  return JSON.parse(fs.readFileSync(filePath, "utf8"));
+async function readData() {
+  const content = await readFile(filePath, "utf8");
+  return JSON.parse(content);
 }
 
-function writeData(data) {
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf8");
+async function writeData(data) {
+  const json = JSON.stringify(data, null, 2);
+  await writeFile(filePath, json, "utf8");
 }
 
-export function getAllCVs() {
-  return readData();
+export async function getAllCVs() {
+  return await readData();
 }
 
-export function getCVById(id) {
-  const data = readData();
+export async function getCVById(id) {
+  const data = await readData();
   return data[id];
 }
 
-export function addCV(newCV) {
-  const data = readData();
+export async function addCV(newCV) {
+  const data = await readData();
   const newId = `cv${Object.keys(data).length + 1}`;
   data[newId] = newCV;
-  writeData(data);
+  await writeData(data);
 }
 
-export function updateCV(id, updatedCV) {
-  const data = readData();
+export async function updateCV(id, updatedCV) {
+  const data = await readData();
   if (data[id]) {
     data[id] = updatedCV;
-    writeData(data);
+    await writeData(data);
     return true;
   }
   return false;
 }
 
-export function deleteCV(id) {
-  const data = readData();
+export async function deleteCV(id) {
+  const data = await readData();
   if (data[id]) {
     delete data[id];
-    writeData(data);
+    await writeData(data);
     return true;
   }
   return false;

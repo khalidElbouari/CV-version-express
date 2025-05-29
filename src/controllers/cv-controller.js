@@ -1,56 +1,86 @@
-import { getAllCVs, getCVById, addCV, updateCV, deleteCV,searchCVs } from '../services/cv-service.js';
+import {
+  getAllCVs,
+  getCVById,
+  addCV,
+  updateCV,
+  deleteCV,
+  searchCVs,
+} from '../services/cv-service.js';
 
 // GET /cvs
-export function getAllCVsHandler(req, res) {
-  const data = getAllCVs();
-  res.json(data);
+export async function getAllCVsHandler(req, res) {
+  try {
+    const data = await getAllCVs();
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ message: "Erreur serveur", error: error.message });
+  }
 }
 
 // GET /cvs/:id
-export function getCVByIdHandler(req, res) {
-  const id = req.params.id;
-  const cv = getCVById(id);
-  if (cv) {
-    res.json(cv);
-  } else {
-    res.status(404).json({ message: "CV non trouvé" });
+export async function getCVByIdHandler(req, res) {
+  try {
+    const id = req.params.id;
+    const cv = await getCVById(id);
+    if (cv) {
+      res.json(cv);
+    } else {
+      res.status(404).json({ message: "CV non trouvé" });
+    }
+  } catch (error) {
+    res.status(500).json({ message: "Erreur serveur", error: error.message });
   }
 }
 
 // POST /cvs
-export function addCVHandler(req, res) {
-  const newCV = req.body;
-  addCV(newCV);
-  res.status(201).json({ message: "CV ajouté avec succès" });
+export async function addCVHandler(req, res) {
+  try {
+    const newCV = req.body;
+    await addCV(newCV);
+    res.status(201).json({ message: "CV ajouté avec succès" });
+  } catch (error) {
+    res.status(500).json({ message: "Erreur serveur", error: error.message });
+  }
 }
 
 // PUT /cvs/:id
-export function updateCVHandler(req, res) {
-  const id = req.params.id;
-  const updatedCV = req.body;
-  const result = updateCV(id, updatedCV);
-  if (result) {
-    res.json({ message: "CV mis à jour" });
-  } else {
-    res.status(404).json({ message: "CV non trouvé" });
+export async function updateCVHandler(req, res) {
+  try {
+    const id = req.params.id;
+    const updatedCV = req.body;
+    const result = await updateCV(id, updatedCV);
+    if (result) {
+      res.json({ message: "CV mis à jour" });
+    } else {
+      res.status(404).json({ message: "CV non trouvé" });
+    }
+  } catch (error) {
+    res.status(500).json({ message: "Erreur serveur", error: error.message });
   }
 }
 
 // DELETE /cvs/:id
-export function deleteCVHandler(req, res) {
-  const id = req.params.id;
-  const result = deleteCV(id);
-  if (result) {
-    res.json({ message: "CV supprimé" });
-  } else {
-    res.status(404).json({ message: "CV non trouvé" });
+export async function deleteCVHandler(req, res) {
+  try {
+    const id = req.params.id;
+    const result = await deleteCV(id);
+    if (result) {
+      res.json({ message: "CV supprimé" });
+    } else {
+      res.status(404).json({ message: "CV non trouvé" });
+    }
+  } catch (error) {
+    res.status(500).json({ message: "Erreur serveur", error: error.message });
   }
 }
 
-export function searchCVsHandler(req, res) {
-  const { name, technology, title } = req.query;
-
-  const results = searchCVs({ name, technology, title });
-
-  res.json(results);
+// GET /cvs/search?name=...&technology=...&title=...
+export async function searchCVsHandler(req, res) {
+  try {
+    const { name, technology, title } = req.query;
+    const results = await searchCVs({ name, technology, title });
+    res.json(results);
+  } catch (error) {
+    res.status(500).json({ message: "Erreur serveur", error: error.message });
+  }
 }
