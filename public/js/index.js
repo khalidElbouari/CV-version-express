@@ -57,18 +57,14 @@ document.addEventListener('click', async (event) => {
       return;
     }
 
-    // Afficher temporairement tous les boutons de téléchargement (au cas où ils sont masqués)
-    const downloadButtons = cvElement.querySelectorAll('.download-pdf-btn');
-    downloadButtons.forEach(btn => btn.style.display = 'block');
-
     const { jsPDF } = window.jspdf;
 
-    // Capture du CV
-    const canvas = await html2canvas(cvElement, { scale: 2 });
+    // Capture du CV en ignorant les boutons
+    const canvas = await html2canvas(cvElement, { 
+      scale: 2,
+      ignoreElements: (element) => element.classList.contains('download-pdf-btn')
+    });
     const imgData = canvas.toDataURL('image/png');
-
-    // Re-masquer les boutons après la capture
-    downloadButtons.forEach(btn => btn.style.display = 'none');
 
     // Génération du PDF
     const pdf = new jsPDF('p', 'pt', 'a4');

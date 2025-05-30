@@ -9,7 +9,7 @@ export function getCVById(id) {
 }
 
 export function addCV(newCV) {
-  return cvRepository.addCV(newCV); // ✅ rajouter return si besoin d’attendre
+  return cvRepository.addCV(newCV); 
 }
 
 export function updateCV(id, updatedCV) {
@@ -23,7 +23,7 @@ export function deleteCV(id) {
 
 
 export async function searchCVs({ name, technology, title }) {
-  const allCVs = await getAllCVs(); // ✅ corrige le problème
+  const allCVs = await getAllCVs(); 
 
   const includesIgnoreCase = (text = '', search = '') =>
     text.toLowerCase().includes(search.toLowerCase());

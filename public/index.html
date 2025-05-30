@@ -56,6 +56,33 @@ hr {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     text-align: center;
 }
+
+.download-pdf-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #4A90E2, #357ABD);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(53, 122, 189, 0.5);
+  transition: background 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.download-pdf-btn:hover {
+  background: linear-gradient(135deg, #357ABD, #2C5A8A);
+  transform: translateY(-2px);
+}
+
+.download-pdf-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
 </style>
 </head>
 <body>
@@ -68,7 +95,7 @@ hr {
                 <input type="text" id="tech-filter" class="filter-input" placeholder="Technologies...">
                 <input type="text" id="title-filter" class="filter-input" placeholder="Titre...">
                 <button class="clear-btn" onclick="clearAllFilters()">Effacer</button>
-             <select id="theme-switcher" class="filter-select" onchange="changeTheme(this.value)">
+            <select id="theme-switcher" class="filter-select" onchange="changeTheme(this.value)">
                 <option value="style1">Thème 1</option>
                 <option value="style2">Thème 2</option>
                 <option value="style3" selected>Thème 3</option>
